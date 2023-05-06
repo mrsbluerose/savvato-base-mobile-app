@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
 
     if (!environment.production) {
-      this.emailaddress = "testuser@votingapp.com";
+      this.emailaddress = "testuser@app.com";
       this.password = "admin"
     } else {
       this.emailaddress = '';
@@ -223,7 +223,7 @@ export class LoginPage implements OnInit {
 
                           self._alertService.show({
                             header: 'Arggh!',
-                            message: "Something bad happened on the server. We hate when that happens. Please email us at info@votingapp.com and let us know.",
+                            message: "Something bad happened on the server. We hate when that happens. Please email us at info@app.com and let us know.",
                             buttons: [{
                               text: 'OK',
                               handler: () => {
