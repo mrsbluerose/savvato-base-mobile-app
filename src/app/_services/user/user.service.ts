@@ -52,7 +52,7 @@ export class UserService {
 			(resolve, reject) => {
 				this._apiService.getUnsecuredAPI(url).subscribe(
 					(data) => {
-						resolve(data["response"]);
+						resolve(data["responseMessage"]);
 					}, (err) => {
 						reject(err);
 					})
