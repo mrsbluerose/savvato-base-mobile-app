@@ -146,7 +146,7 @@ export class PictureService {
 
         self._apiService.post(url, formData)
             .subscribe(res => {
-              if (res['msg'] === 'ok') {
+              if (res['responseMessage'] === 'ok') {
                 resolve(true);
               } else {
                 reject("error posting image to server");
