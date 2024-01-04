@@ -74,11 +74,10 @@ export class PictureService {
 
         // check the API, it returns the timestamp of the file it has.
         const url1 = environment.apiUrl + "/api/resource/" + photoType + "/" + objId + "/isFound";
-        self._apiService.get(url1).subscribe((pictureAPITimestamp: number) => {
+        self._apiService.get(url1).subscribe((res) => {
 
           let url = '';
-
-          if (pictureAPITimestamp * 1 > 0) { // meaning, this file exists on the API
+          if (res['responseLong'] * 1 > 0) { // meaning, this file exists on the API
             url = environment.apiUrl + "/api/resource/" + photoType + "/" + objId + "?photoSize=" + photoSize;
           } else {
             url = '/assets/img/defaults/color-block-' + objId % 7 + '.jpg';
