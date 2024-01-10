@@ -40,7 +40,7 @@ export class ProfileApiService {
             (resolve, reject) => {
                 this._apiService.put(url, data).subscribe(
                     (_data) => {
-                        console.log('save profile ' + model['id'] + ' was successful --> ' +_data);
+                        console.log('save profile ' + model['id'] + ' was successful --> ' + JSON.stringify(_data));
 
                         resolve({"successful": _data});
                     }, (err) => {

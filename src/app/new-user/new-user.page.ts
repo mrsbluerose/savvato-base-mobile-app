@@ -151,7 +151,7 @@ export class NewUserPage implements OnInit {
 
     if (self.isSaveBtnEnabled()) {
       self._userService.isUserInformationUnique(self.user).then((userInfo) => {
-        if (userInfo == true) {
+        if (userInfo == "true") {
           if (!self.codeAlreadySent) {
             self._alertService.show({
               header: 'Ready for a text?',
